@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/purple_500"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:text="无障碍服务状态"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnOpenAccessibility"
+                android:text="📱 无障碍服务"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/purple_500"/>
+
+            <Button
+                android:id="@+id/btnRequestOverlayPermission"
+                android:text="🔐 悬浮窗权限"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@android:color/white"
+                android:textColor="@color/purple_500"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 服务状态监控区域 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/tvServiceStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="🔧 无障碍服务: 检查中...\n📊 日志条数: 0\n⏰ 状态更新: --:--:--"
+            android:textSize="14sp"
+            android:background="#E8F5E8" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 功能按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnViewLogs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📋 查看日志"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btnLocationRecord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📍 定位记录"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="#FF9800" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- 应用选择区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选择的应用："
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/purple_500"
+            android:layout_marginStart="8dp"/>
+
+        <Button
+            android:id="@+id/btnStartService"
+            android:text="⚙️ 配置任务"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:backgroundTint="#4CAF50"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+
+</LinearLayout>

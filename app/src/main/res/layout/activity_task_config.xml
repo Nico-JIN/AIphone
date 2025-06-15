@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 应用信息 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/tvAppInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3F2FD"
+                android:padding="16dp"
+                android:text="📱 配置应用信息"
+                android:textColor="#1976D2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 基础配置 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="⚙️ 基础配置"
+                    android:textColor="#424242"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 基础滑动任务开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📱 启用基础滑动任务"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchSwipeTask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 滑动间隔 -->
+                <TextView
+                    android:id="@+id/tvSwipeInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="滑动间隔: 3秒"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbSwipeInterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:max="9000"
+                    android:progress="2000" />
+
+                <!-- 停留时间 -->
+                <TextView
+                    android:id="@+id/tvStayDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="停留时间: 5秒"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbStayDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:max="14000"
+                    android:progress="4000" />
+
+                <!-- 最大操作次数 -->
+                <TextView
+                    android:id="@+id/tvMaxOperations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最大次数: 50次"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbMaxOperations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="190"
+                    android:progress="40" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 操作概率配置 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="🎯 操作概率配置"
+                    android:textColor="#424242"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 点赞操作开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="👍 启用点赞操作"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchLikeOperation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 点赞概率 -->
+                <TextView
+                    android:id="@+id/tvLikeChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="点赞概率: 30%"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbLikeChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:max="100"
+                    android:progress="30" />
+
+                <!-- 关注操作开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="➕ 启用关注操作"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchFollowOperation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 关注概率 -->
+                <TextView
+                    android:id="@+id/tvFollowChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="关注概率: 5%"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbFollowChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:max="50"
+                    android:progress="5" />
+
+                <!-- 评论操作开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💬 启用评论操作"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchCommentOperation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 评论概率 -->
+                <TextView
+                    android:id="@+id/tvCommentChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="评论概率: 10%"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/sbCommentChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="50"
+                    android:progress="10" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 高级设置 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="🔧 高级设置"
+                    android:textColor="#424242"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 自动启动任务开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🚀 启动应用后自动开始任务"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchAutoStartTask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 智能检测开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🧠 智能元素检测"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchSmartDetection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 手势操作开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="👆 手势操作模式"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchGesture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 随机延迟开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🎲 随机延迟模拟"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchRandomDelay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- 直播模式开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📺 直播模式（专注点赞）"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switchLiveMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+
+                </LinearLayout>
+
+                <!-- 直播模式设置区域 -->
+                <LinearLayout
+                    android:id="@+id/layoutLiveSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:background="@drawable/live_settings_background"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📺 直播点赞设置"
+                        android:textColor="#4CAF50"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 点赞次数设置 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="👍 点赞次数"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvLiveLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50次"
+                            android:textColor="#4CAF50"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:minWidth="60dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbLiveLikeCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:max="990"
+                        android:progress="40" />
+
+                    <!-- 点赞间隔设置 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="⏱️ 点赞间隔"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvLiveLikeInterval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.0秒"
+                            android:textColor="#4CAF50"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:minWidth="60dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbLiveLikeInterval"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:max="4950"
+                        android:progress="1950" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💡 提示：支持50ms-5s精确调节，建议200ms-1s"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSaveConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/purple_500"
+                android:text="💾 保存配置"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnStartTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50"
+                android:text="📱 启动应用"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+            <Button
+                android:id="@+id/btnResetDefault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF9800"
+                android:text="🔄 重置默认"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView> 

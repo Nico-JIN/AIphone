@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AIphone" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 主色 -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <!-- 状态栏颜色（深色） -->
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <!-- 强调色 -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- ActionBar 标题颜色 -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- 窗口背景色 -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Toolbar 背景色 -->
+        <item name="toolbarStyle">@style/Widget.Toolbar.Custom</item>
+        <!-- 使状态栏图标为浅色 -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- 自定义 Toolbar 样式 -->
+    <style name="Widget.Toolbar.Custom" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/purple_500</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AIPhone</string>
+    <string name="accessibility_service_label">AIPhone自动化服务</string>
+    <string name="accessibility_service_description">用于执行自动化操作，包括手势滑动、自动点赞、页面切换等功能。需要授予手势权限以完成滑动操作。</string>
+</resources>
