@@ -4,8 +4,9 @@
 
 AIPhone是一个基于Android无障碍服务的自动化助手，专门用于手机应用自动化操作。支持智能点赞、评论、滑动浏览等功能，提供简洁的UI界面和强大的元素检测能力。
 
+![image](https://github.com/user-attachments/assets/5375dfe4-1293-4cef-81c6-5ad484632a23)![image](https://github.com/user-attachments/assets/65758d25-0ef6-463d-89b3-1cfca986ca86)
 
-![image](https://github.com/user-attachments/assets/f5c91f97-b4a3-41b1-98fa-80ab4994053c)![image](https://github.com/user-attachments/assets/1127a138-7dde-4581-9dd2-d68bc7160123)
+
 
 
 
